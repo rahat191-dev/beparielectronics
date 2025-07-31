@@ -10,3 +10,14 @@ function toggleMenu() {
   const nav = document.getElementById("navbar");
   nav.classList.toggle("show");
 }
+
+document.addEventListener('click', (event) => {
+  const nav = document.getElementById('navbar');
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  if (nav && menuToggle) {
+    if (nav.classList.contains('show') && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+      nav.classList.remove('show');
+    }
+  }
+});
