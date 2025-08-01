@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function goToForm(productName) {
-  // Local storage e product name save kore
   localStorage.setItem("selectedProduct", productName);
-  // form.html e niye jay
   window.location.href = "form.html";
 }
